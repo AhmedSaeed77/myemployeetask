@@ -13,8 +13,8 @@ class Attendance extends Model
     protected $fillable=['employee_id','start','end'];
     public $timestamps = true;
 
-    public function employee()
-    {
-        return $this->belongsTo('App\Models\Employee', 'employee_id');
-    }
+    // public function employee()
+    // {
+    //     return $this->belongsTo('App\Models\Employee', 'employee_id');
+    // }
 }

@@ -21,9 +21,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/check', [AdminController::class, 'check'])->name('login');
-//Route::any('/login2', [AdminController::class, 'login'])->name('alogin');
-//Route::any('/logout', [AdminController::class, 'logout'])->name('logout');
 
 Route::group(['middleware' => ['auth']], function () {
 
@@ -46,11 +43,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::group(['prefix' => 'employeeattendace', 'as' => 'employeeattendace.'], function () {
         Route::get('/', [EmployeeAttendanceController::class, 'index'])->name('index');
-        // Route::get('/add', [EmployeeController::class, 'add'])->name('add');
-        // Route::post('/store', [EmployeeController::class, 'store'])->name('store');
-        // Route::get('/edit/{id}', [EmployeeController::class, 'edit'])->name('edit');
-        // Route::post('/update', [EmployeeController::class, 'update'])->name('update');
-        // Route::post('/delete', [EmployeeController::class, 'delete'])->name('delete');
+        Route::post('/attendace', [EmployeeAttendanceController::class, 'attendace'])->name('attendace');
+        Route::post('/departure', [EmployeeAttendanceController::class, 'departure'])->name('departure');
+        Route::get('/show/{id}', [EmployeeAttendanceController::class, 'show'])->name('show');
     });
 
 });

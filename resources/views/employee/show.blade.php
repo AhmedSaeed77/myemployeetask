@@ -34,7 +34,7 @@
                     <td><img src="{{ asset('images/employee/'.$employee->image) }}"  width="100"></td>
                     <td>
                      <a class="btn btn-dark mt-4" href="{{ route('employee.edit',$employee->id) }}" type="button">Edit</a>
-                     <button type="submit" onclick="deleteFunction({{ $employee->id }})" class="btn btn-sm btn-danger flex-shrink-0  mt-4">Delete</button>
+                     <button type="submit" onclick="deleteFunction({{ $employee->id }})" class="btn btn-danger flex-shrink-0  mt-4">Delete</button>
                     </td>
                 </tr>
             @endforeach

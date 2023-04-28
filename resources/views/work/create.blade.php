@@ -13,11 +13,11 @@
         <fieldset class="form-fieldset">
             <div class="mb-3">
                 <label class="form-label required">Start</label>
-                <input type="date" v-model="start" name="start" class="form-control"  autocomplete="off"/>
+                <input type="time" v-model="start" name="start" class="form-control"  autocomplete="off"/>
             </div>
             <div class="mb-3">
                 <label class="form-label required">End</label>
-                <input type="date" v-model="end" name="end" class="form-control"  autocomplete="off"/>
+                <input type="time" v-model="end" name="end" class="form-control"  autocomplete="off"/>
             </div>
         </fieldset>
         <button type="submit" @click="saveData" class="btn btn-primary mt-3 mb-0">save</button>

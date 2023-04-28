@@ -13,9 +13,9 @@ class Employee extends Model
     protected $fillable=['name','employeenumber','employeedate','image'];
     public $timestamps = true;
 
-    public function attendace()
-    {
-        return $this->hasMany('App\Models\Attendance', 'employee_id');
-    }
+    // public function attendace()
+    // {
+    //     return $this->hasMany('App\Models\Attendance', 'employee_id');
+    // }
 
 }
